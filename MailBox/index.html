@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="mailBoxApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mail Box</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-9">
+                <table class="table" ng-show="!showDetails">
+                    <col width="150px" />
+                    <col width="150px" />
+                    <col width="150px" />
+                    <thead>
+                        <tr>
+                            <td>Отправитель</td>
+                            <td>Тема</td>
+                            <td>Дата</td>
+                        </tr>
+                    </thead>
+                    <tbody maildata>
+                        <tr mailitem ng-repeat="item in items" ng-click="showDetails = ! showDetails"></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
