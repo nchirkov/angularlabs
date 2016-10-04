@@ -1,7 +1,42 @@
-<tr>
-    <td ng-show="!showDetails">{{item.from}}</td>
-    <td ng-show="!showDetails">{{item.subject}}</td>
-    <td ng-show="!showDetails">{{item.date}}</td>
-    <td colspan="2" ng-show="showDetails">{{item.content}}</td>
-    <td ng-show="showDetails"><a href="#">Назад</a></td>
-</tr>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <div class="row">
+            <table class="table" ng-click="showDetails=!showDetails">
+                <col width="150px" />
+                <col width="150px" />
+                <col width="150px" />
+                <tr>
+                    <td>{{$ctrl.item.from}}</td>
+                    <td>{{$ctrl.item.subject}}</td>
+                    <td>{{$ctrl.item.date}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="panel-body" ng-show="showDetails">
+        <div class="row">
+            <div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>От</td>
+                            <td>{{$ctrl.item.from}}</td>
+                        </tr>
+                        <tr>
+                            <td>Тема</td>
+                            <td>{{$ctrl.item.subject}}</td>
+                        </tr>
+                        <tr>
+                            <td>Дата</td>
+                            <td>{{$ctrl.item.date}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>{{$ctrl.item.content}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

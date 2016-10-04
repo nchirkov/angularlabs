@@ -10,22 +10,12 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 col-lg-9">
-                <table class="table" ng-show="!showDetails">
-                    <col width="150px" />
-                    <col width="150px" />
-                    <col width="150px" />
-                    <thead>
-                        <tr>
-                            <td>Отправитель</td>
-                            <td>Тема</td>
-                            <td>Дата</td>
-                        </tr>
-                    </thead>
-                    <tbody maildata>
-                        <tr mailitem ng-repeat="item in items" ng-click="showDetails = ! showDetails"></tr>
-                    </tbody>
-                </table>
+            <div class="col-md-9">
+                <maildata>
+                    <div ng-repeat="item in items">
+                        <mailitem item="item"></mailitem>
+                    </div>
+                </maildata>
             </div>
         </div>
     </div>
