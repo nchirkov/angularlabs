@@ -4,11 +4,9 @@
             <table class="table" ng-click="showDetails=!showDetails">
                 <col width="150px" />
                 <col width="150px" />
-                <col width="150px" />
                 <tr>
-                    <td>{{$ctrl.item.from}}</td>
+                    <td>{{$ctrl.item.to}}</td>
                     <td>{{$ctrl.item.subject}}</td>
-                    <td>{{$ctrl.item.date}}</td>
                 </tr>
             </table>
         </div>
@@ -20,7 +18,7 @@
                     <tbody>
                         <tr>
                             <td>От</td>
-                            <td>{{$ctrl.item.from}}</td>
+                            <td>{{$ctrl.item.to}}</td>
                         </tr>
                         <tr>
                             <td>Тема</td>
@@ -28,11 +26,7 @@
                         </tr>
                         <tr>
                             <td>Дата</td>
-                            <td>{{$ctrl.item.date}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>{{$ctrl.item.content}}</td>
+                            <td>{{$ctrl.item.body}}</td>
                         </tr>
                     </tbody>
                 </table>
