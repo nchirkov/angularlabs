@@ -1,18 +1,26 @@
 <div class="col-md-5">
     <div class="form-group">
         <label>Currency I Have</label>
-        <input type="text" class="form-control" value="USD">
+        <select class="form-control" ng-model="$ctrl.fromCurrency">
+          <option value="USD">USD</option>
+          <option value="RUB">RUB</option>
+          <option value="EUR">EUR</option>
+        </select>
         <label>Amount</label>
         <input type="text" class="form-control" ng-model="$ctrl.fromAmount">
     </div>
 </div>
-<div class="col-md-2">
+<div class="col-md-2 text-center">
     <button class="btn btn-primary" ng-click="$ctrl.convert()">Convert</button>
 </div>
 <div class="col-md-5">
     <div class="form-group">
         <label>Currency I Want</label>
-        <input type="text" class="form-control" value="Rouble">
+        <select class="form-control" ng-model="$ctrl.toCurrency">
+          <option value="USD">USD</option>
+          <option value="RUB">RUB</option>
+          <option value="EUR">EUR</option>
+        </select>
         <label>Amount</label>
         <input type="text" class="form-control" value={{$ctrl.toAmount}}>
     </div>
