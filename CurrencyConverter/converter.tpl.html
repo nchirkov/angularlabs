@@ -1,0 +1,19 @@
+<div class="col-md-5">
+    <div class="form-group">
+        <label>Currency I Have</label>
+        <input type="text" class="form-control" value="USD">
+        <label>Amount</label>
+        <input type="text" class="form-control" ng-model="$ctrl.fromAmount">
+    </div>
+</div>
+<div class="col-md-2">
+    <button class="btn btn-primary" ng-click="$ctrl.convert()">Convert</button>
+</div>
+<div class="col-md-5">
+    <div class="form-group">
+        <label>Currency I Want</label>
+        <input type="text" class="form-control" value="Rouble">
+        <label>Amount</label>
+        <input type="text" class="form-control" value={{$ctrl.toAmount}}>
+    </div>
+</div>
