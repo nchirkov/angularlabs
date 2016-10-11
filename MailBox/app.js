@@ -1,7 +1,7 @@
   angular.module('mailBoxApp', [])
       .service('MailService', function($http) {
           this.get = () => {
-              return $http.get('http://test-api.javascript.ru/v1/nchirkov/letters')
+              return $http.get('https://test-api.javascript.ru/v1/nchirkov/letters')
                   .then(response => response.data)
           }
       })
