@@ -8,14 +8,16 @@
 </head>
 
 <body>
+    <a ui-sref="users" ui-sref-active="active">Пользователи</a>
 
     <div class="container">
         <div class="row">
-            <userdata/>
+            <ui-view></ui-view>
         </div>
     </div>
 
     <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//npmcdn.com/angular-ui-router@1.0.0-alpha.4/release/angular-ui-router.js"></script>
     <script src="app.js"></script>
 
 </body>
