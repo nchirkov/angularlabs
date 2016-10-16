@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="signInApp">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <a ui-sref="login" ui-sref-active="active">Войти</a>
+    <a ui-sref="users" ui-sref-active="active">Учетная запись</a>
+
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+
+    <script src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//npmcdn.com/angular-ui-router@1.0.0-alpha.4/release/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
