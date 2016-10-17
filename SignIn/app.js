@@ -31,8 +31,11 @@ angular.module('signInApp', ['ui.router'])
         };
     })
     .component('login', {
-        controller: function(SignInService) {
-            this.authenticate = () => SignInService.authenticate(this.email, this.password);
+        controller: function(SignInService, $state) {
+            this.authenticate = () => {
+                SignInService.authenticate(this.email, this.password);
+                $state.go('users');
+            }
         },
         templateUrl: 'login.tpl.html'
     })
